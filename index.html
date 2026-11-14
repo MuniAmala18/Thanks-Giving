@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eff5e8">
+  <meta name="description" content="A little note of gratitude, made just for you.">
+  <title>A Little Note For You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <aside class="music-player" id="music-player" aria-label="Background music">
+    <span class="player-butterfly player-butterfly-one" aria-hidden="true">🦋</span>
+    <span class="player-butterfly player-butterfly-two" aria-hidden="true">🦋</span>
+    <button class="music-toggle" id="music-toggle" type="button" aria-label="Play Magic Shop" aria-pressed="false" data-tooltip="Play Magic Shop 💜">
+      <span class="music-toggle-icon" id="music-toggle-icon" aria-hidden="true">♫</span>
+    </button>
+    <span class="visually-hidden" id="music-status" role="status" aria-live="polite">Music is off</span>
+    <p class="music-toast" id="music-toast" aria-hidden="true" hidden>A little Magic Shop moment 💜</p>
+  </aside>
+  <audio id="background-music" src="assets/music/magic-shop.mp3" loop preload="none"></audio>
+
+  <main>
+    <section class="welcome-screen screen" id="welcome" aria-labelledby="welcome-title">
+      <div class="decor decor-welcome" aria-hidden="true"></div>
+      <div class="welcome-content">
+        <p class="eyebrow">a little something, just for you</p>
+        <div class="welcome-flower" aria-hidden="true">✿</div>
+        <div class="welcome-envelope-art" aria-hidden="true"><span>✿</span></div>
+        <h1 id="welcome-title">A Little Note<br><em>For You...</em></h1>
+        <p class="welcome-subtitle">Because some people make the journey a little more special.</p>
+        <button class="button button-primary" id="open-surprise" type="button">Open Your Little Surprise <span aria-hidden="true">💌</span></button>
+        <p class="handwritten welcome-signoff">made with a little extra gratitude</p>
+      </div>
+      <span class="side-note" aria-hidden="true">a small reminder that you are appreciated</span>
+    </section>
+
+    <section class="envelope-screen screen" id="envelope-screen" aria-labelledby="envelope-title" hidden>
+      <div class="decor decor-envelope" aria-hidden="true"></div>
+      <div class="envelope-content">
+        <p class="eyebrow">carefully tucked inside</p>
+        <h2 id="envelope-title">A note, sealed with gratitude</h2>
+        <div class="envelope-wrap" id="envelope-wrap" tabindex="0" role="button" aria-pressed="false" aria-label="Open the envelope">
+          <div class="envelope" aria-label="An illustrated sage green envelope">
+            <div class="envelope-letter">
+              <span class="handwritten">Dear <span data-recipient>you</span>,</span>
+              <span class="letter-preview">There are a few things I wanted to say...</span>
+              <span class="letter-sprig" aria-hidden="true">❧</span>
+            </div>
+            <div class="envelope-back"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <span class="envelope-seal" aria-hidden="true">✿</span>
+          </div>
+        </div>
+        <p class="envelope-hint" id="envelope-hint">Tap the envelope to open your note</p>
+        <button class="button button-primary" id="more-inside" type="button" hidden>There's More Inside! <span aria-hidden="true">↓</span></button>
+      </div>
+    </section>
+
+    <div id="gift-content" hidden>
+      <section class="letter-section section-pad" id="letter" aria-labelledby="letter-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">from a colleague and friend</p>
+          <h2 id="letter-title">A Little Note For You</h2>
+          <p>Some things are worth putting into words.</p>
+        </div>
+        <article class="letter-paper reveal">
+          <span class="letter-butterfly" aria-hidden="true">🦋</span>
+          <div class="paper-flower paper-flower-one" aria-hidden="true">✿</div>
+          <div class="paper-flower paper-flower-two" aria-hidden="true">❀</div>
+          <div class="letter-copy" id="letter-copy"></div>
+          <div class="letter-bottom" aria-hidden="true">❧</div>
+        </article>
+        <a class="text-link" href="#gratitude">A few more things I appreciate <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="gratitude-section section-pad" id="gratitude" aria-labelledby="gratitude-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">three little things</p>
+          <h2 id="gratitude-title">Things I'm grateful for</h2>
+          <p>Pick a card to turn it over.</p>
+        </div>
+        <div class="gratitude-grid" id="gratitude-grid"></div>
+      </section>
+
+      <section class="money-section section-pad" id="good-luck" aria-labelledby="money-title">
+        <div class="money-doodle" aria-hidden="true"><span>✦</span><span>✧</span><span>✿</span></div>
+        <div class="money-card reveal">
+          <p class="eyebrow">and now, the very important part</p>
+          <h2 id="money-title">One Last Very<br><em>Important Wish...</em></h2>
+          <p class="money-wish"><mark class="phrase-highlight">May your bank balance grow faster than your to-do list!</mark> <span aria-label="laughing">😂</span><span aria-label="money">💰</span></p>
+          <p>May you achieve all the wealth, success, and happiness you've ever dreamed of.</p>
+          <button class="button button-primary" id="good-luck-button" type="button">Send Unlimited Good Luck! <span aria-hidden="true">🍀</span></button>
+          <p class="success-message" id="success-message" role="status" aria-live="polite" hidden>Manifesting endless money and success for you! 💚</p>
+          <div class="coin-burst" id="coin-burst" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="final-section screen" id="finale" aria-labelledby="final-title">
+        <div class="decor decor-finale" aria-hidden="true"></div>
+        <div class="final-content reveal">
+          <span class="final-flower" aria-hidden="true">✿</span>
+          <p class="final-thought" id="final-thought"></p>
+          <h2 id="final-title">HAPPY<br><em>THANKSGIVING!</em> <span aria-hidden="true">🌿</span></h2>
+          <p id="final-message"></p>
+          <p class="handwritten final-signature" id="final-signature"></p>
+          <button class="button button-light" id="replay-button" type="button"><span aria-hidden="true">↺</span> Read it again</button>
+        </div>
+        <p class="footer-note">a little gratitude goes a long way</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
